@@ -1,15 +1,15 @@
-const TodoModel = require("../model/TodoModel"); // Import the TodoModel
+const TodoModel = require("../model/TodoModel"); 
 
 // Create a new to-do item
 exports.createTodo = (req, res) => {
     let reqBody = req.body;
 
     let UserName = req.headers['username'];
-    let TodoSubject = reqBody['TodoSubject'];
     let TodoDescription = reqBody['TodoDescription'];
+    let TodoSubject = reqBody['TodoSubject'];
     let TodoStatus = 'New';
-    let TodoCreateDate = Date.now();
     let TodoUpdateDate = Date.now();
+    let TodoCreateDate = Date.now();
 
     let postBody = {
         UserName: UserName,

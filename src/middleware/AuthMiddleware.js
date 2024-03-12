@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 
 module.exports = (req, res, next) => {
-    // Extract the token from the request headers
+    
     let token = req.headers['token'];
 
     // Verify the token
@@ -17,7 +17,7 @@ module.exports = (req, res, next) => {
             // Set the username in the request headers for future use
             req.headers.username = username;
 
-            // Move to the next middleware or route handler
+            
             next();
         }
     });
